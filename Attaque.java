@@ -1,4 +1,4 @@
-public class attaque {
+public class Attaque {
     public int puissance;
     public String nom;
     public int precision;
@@ -7,7 +7,7 @@ public class attaque {
 
 
 
-    public attaque(int puissance, String nom, int precision, String type, int priorite){
+    public Attaque(int puissance, String nom, int precision, String type, int priorite){
         this.puissance = puissance;
         this.nom = nom;
         this.precision = precision;
@@ -15,10 +15,10 @@ public class attaque {
         this.priorite = priorite;
     }
 
-    public void Attaque(int puissance, int precision, String nom, Type type, int priorite){
+   /* public void Attaque(int puissance, int precision, String nom, Type type, int priorite){
 
     
-    }
+    }*/
 
     
 

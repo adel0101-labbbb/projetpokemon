@@ -1,15 +1,21 @@
-public class Type{
-    public String nom;
-    
-    public Type(String nom){
+public class Type {
+    private String nom;
+
+    public Type(String nom) {
         this.nom = nom;
     }
 
-    /* public void Type(String nom){
-
+    public String getNom() {
+        return nom;
     }
 
-    public void havePenalty
+    public boolean isSameAs(Type typeAdverse) {
+        return typeAdverse != null && this.nom.equalsIgnoreCase(typeAdverse.nom);
+    }
 
+   /* public boolean haveBonusVS(Type typeAdverse){
+        
 
-}*/
+    }
+*/
+}
