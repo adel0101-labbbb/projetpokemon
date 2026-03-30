@@ -1,7 +1,8 @@
 public class Type {
     private String nom;
+    private int id;
 
-    public Type(String nom) {
+    public Type(String nom, int id){
         this.nom = nom;
     }
 
@@ -10,12 +11,12 @@ public class Type {
     }
 
     public boolean isSameAs(Type typeAdverse) {
-        return typeAdverse != null && this.nom.equalsIgnoreCase(typeAdverse.nom);
+        return typeAdverse != null && this.nom.equals(typeAdverse.nom);
     }
 
-   /* public boolean haveBonusVS(Type typeAdverse){
-        
-
+    public int getId(){
+        return id;
     }
-*/
+
+
 }
