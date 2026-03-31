@@ -1,4 +1,4 @@
-public class Pokemon{
+public class PokemonEspece{
     String nom;
     int pvMax;
     int pv;
@@ -10,7 +10,9 @@ public class Pokemon{
     Attaque[] attaque;  // !!!!!!
     Etat etat;
 
-    public Pokemon(String nom, int pvMax, int pv, int attack, int defense, int vitesse, Type type1, Type type2, Attaque[] attaque, Etat etat){
+
+
+    public PokemonEspece(String nom, int pvMax, int pv, int attack, int defense, int vitesse, Type type1, Type type2, Attaque[] attaque, Etat etat){
         this.nom = nom;
         this.pvMax = pvMax;
         this.pv = pv;

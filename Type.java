@@ -2,8 +2,10 @@ public class Type {
     private String nom;
     private int id;
 
-    public Type(String nom, int id){
+    public Type(int id, String nom){
+        this.id = id;
         this.nom = nom;
+        
     }
 
     public String getNom() {

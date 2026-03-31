@@ -1,0 +1,6 @@
+public class PokemonDAO{
+    private Map<String, String> pokemon = new HashMap<>();
+    private DatabaseManager dbm;
+}
+
+public void select

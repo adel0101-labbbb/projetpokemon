@@ -16,12 +16,12 @@ public class Test {
         }
 
         String sql = "SELECT * FROM pokemons;";
-        String sql1 = "SELECT * FROM types;";
+        String sql1 = "SELECT * FROM attaques;";
 
-        try {
-            Connection c = dbm.getConnection();
+      //  try {
+            /*Connection c = dbm.getConnection();
 
-            System.out.println("toto " + c.toString());
+          //  System.out.println("toto " + c.toString());
 
             PreparedStatement requete = c.prepareStatement(sql);
             PreparedStatement requete1 = c.prepareStatement(sql1);
@@ -39,8 +39,37 @@ public class Test {
 
         } catch (SQLException e) {
             System.out.println(e.getErrorCode());
-        }
+        }*/
+// test dao
+        try{
+       /*     Connection c = dbm.getConnection();
+            String sqldao = "SELECT * FROM dresseurs;";
+
+            PreparedStatement requetedao = c.prepareStatement(sqldao);
+            ResultSet donneesdao = requetedao.executeQuery();
+
+            while(donneesdao.next()){
+                System.out.println(donneesdao.getInt("id") + " : " + donneesdao.getString("nom") + ";");
+            */ 
+
+
+            TypeDAO tyDAO = new TypeDAO(dbm);
+            tyDAO.loadAll();
+            
+            }catch(SQLException e){
+
+            }
+        
+      //  }
+    
+       
+        
+        
     }
 }
 
+
+
+
+        
 
