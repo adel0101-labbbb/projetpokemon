@@ -54,6 +54,7 @@ public class TypeDAO {
 
             Type type = new Type(id, nom);
             typesParId.put(id, type);
+            System.out.println("Type chargé : " + id + " - " + nom);
         }
 
         rs.close();
