@@ -17,7 +17,7 @@ public class Attaque {
 
     public void Degats(int precision, int puissance, String nom, Type type, int priorite, String p1, String p2){
 
-        double degats = (p1.getAttaque() / p2.getDefense()) * Puissance * MultiplicateurType ;
+        double degats = (p1.getAttaque() / p2.getDefense()) * puissance * MultiplicateurType ;
 
     }
 }

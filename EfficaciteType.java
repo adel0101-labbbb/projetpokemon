@@ -12,31 +12,17 @@ public class EfficaciteType {
         this.multiplicateur = multiplicateur;    
     }
 
-    public double getMultplicateur(){
-        return multiplicateur
+    public double getMultiplicateur(){
+        return multiplicateur;
     }
 
     public Type getTypeAttaque(){
-        return typeAttaque
+        return typeAttaque;
     }
 
     public Type getTypeCible(){
-        return typeCible
+        return typeCible;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

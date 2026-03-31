@@ -4,24 +4,18 @@ import java.sql.*;
 public class Test{
     public static void main(String[] args) {
 
-
-        DatabaseManager dbm = new DatabaseManager();
-
-        try{
-            dbm.connect();
-        }catch(SQLException e){
-            System.out.println("Erreur :"+ e.getMessage());
-        }
-
-        String sql = "SELECT * FROM pokemons;";
         try {
-            PreparedStatement requete = dbm.getConnection().prepareStatement(sql);
-            ResultSet donnees = requete.executeQuery();
-            while(donnees.next()){
-            System.out.println(donnees.getInt("id")+" : " + donnees.getString("nom")+";");
-        }
-        }catch(SQLException e){
-            System.out.println(e.getErrorCode());
+            Connection conn = Database.getConnection();
+
+            AttaqueDAO dao = new AttaqueDAO(conn);
+
+            // 🔥 récupérer les attaques
+            for (Attaque a : dao.getAll()) {
+                System.out.println(a.getNom());
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 }
