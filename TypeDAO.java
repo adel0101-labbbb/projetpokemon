@@ -11,8 +11,8 @@ public class TypeDAO {
     private DatabaseManager dbm;
     private Map<Integer, Type> typesParId;
 
-    public TypeDAO(DatabaseManager dbm) {
-        this.dbm = dbm;
+    public TypeDAO() {
+        this.dbm = new DatabaseManager();
         this.typesParId = new HashMap<>();
     }
 
@@ -24,6 +24,10 @@ public class TypeDAO {
         String sql = "SELECT id, libelle FROM types";
 
         Connection conn = dbm.getConnection();
+        if (conn == null) {
+            System.out.println("ERREUR : la connexion est null");
+            return;
+        }
         PreparedStatement stmt = conn.prepareStatement(sql);
         ResultSet rs = stmt.executeQuery();
 

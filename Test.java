@@ -8,6 +8,7 @@ public class Test {
     public static void main(String[] args) {
         try {
             DatabaseManager dbm = new DatabaseManager();
+            dbm.connect();
             TypeDAO tyDAO = new TypeDAO(dbm);
 
             tyDAO.loadAll();
