@@ -1,24 +1,3 @@
-//import java.util.HashMap;
-/*import java.util.HashMap;
-import java.util.Map;
-
-public class TypeDAO{
-    private DatabaseManager dbm;
-    private Map<Integer, Type> typesParId;
-    private Map<Integer, Type> typesParNom;
-
-    public TypeDAO(DatabaseManager dbm) {
-    this.dbm = dbm;
-    this.typesParId = new HashMap<>();
-    this.typesParNom = new HashMap<>();
-
-}
-
-    
-
-}
-*/
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
