@@ -55,7 +55,7 @@ public class Test {
 
             TypeDAO tyDAO = new TypeDAO(dbm);
             tyDAO.loadAll();
-            System.out.println(tyDAO);
+            System.out.println();
             
             }catch(SQLException e){
 
