@@ -1,24 +1,29 @@
 public class Attaque {
+    public int puissance;
+    public String nom;
+    public int precision;
+    public Type type;
+    public int priorite;
 
-    private int precision;
-    private String nom;
-    private int puissance;
-    private Type type;
-    private int priorite;
-    
-    public Attaque(int precision, String nom, int puissance, Type type, int priorite){
-    
-        this.precision = precision;
-        this.nom = nom;
+
+
+    public Attaque(int puissance, String nom, int precision, Type type, int priorite){
         this.puissance = puissance;
+        this.nom = nom;
+        this.precision = precision;
         this.type = type;
         this.priorite = priorite;
     }
 
-    public void Degats(int precision, int puissance, String nom, Type type, int priorite, String p1, String p2){
+   /* public void Attaque(int puissance, int precision, String nom, Type type, int priorite){
 
-        double degats = (p1.getAttaque() / p2.getDefense()) * puissance * MultiplicateurType ;
+    
+    }*/
 
-    }
+    
+
+
+
+
+
 }
-

@@ -8,7 +8,7 @@ import java.sql.SQLException;
  */
 public class DatabaseManager {
 
-    private static final String URL = "jdbc:mysql://localhost/pokedata"; //A modifier
+    private static final String URL = "jdbc:mysql://localhost/Pokemon"; //A modifier
     private static final String USER = "userdb"; // A modifier
     private static final String PASSWORD = "linux"; // A modifier
 

@@ -7,9 +7,13 @@ public class EfficaciteDAO {
         List<EfficaciteType> liste = new ArrayList<>();
 
         try {
-            Connection conn = DatabaseManager.getConnection("jdbc:mysql://localhost:3306/pokedata", "dbuser", "linux");
-            Statement stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery("SELECT * FROM efficacite");
+        DatabaseManager dbm = new DatabaseManager(); // ✅ créer l'objet
+        dbm.connect();                               // ✅ ouvrir la connexion
+        Connection conn = dbm.getConnection();       // ✅ récupérer la connexion
+
+        
+        Statement stmt = conn.createStatement();
+        ResultSet rs = stmt.executeQuery("SELECT * FROM efficacite");
 
             while (rs.next()) {
 
@@ -31,6 +35,7 @@ public class EfficaciteDAO {
 
             rs.close();
             stmt.close();
+            dbm.disconnect(); // ✅ fermer la connexion
 
         } catch (SQLException e) {
             e.printStackTrace();

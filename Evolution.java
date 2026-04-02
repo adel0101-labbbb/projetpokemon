@@ -1,32 +1,32 @@
 public class Evolution{
 
-    private Pokemon especeBase;
-    private Pokemon especeEvoluee;
-    private int niveauReqis;
+    private PokemonEspece especeBase;
+    private PokemonEspece especeEvoluee;
+    private int niveauRequis;
 
 
-    public Evolution(Pokemon especeBase, Pokemon especeEvoluee, int niveauReqis){
+    public Evolution(PokemonEspece especeBase, PokemonEspece especeEvoluee, int niveauRequis){
 
         this.especeBase = especeBase;
         this.especeEvoluee = especeEvoluee;
-        this.niveauReqis = niveauReqis;
+        this.niveauRequis = niveauRequis;
     }
 
     
     public boolean peutEvoluer(int niveau){
-    return niveau >= niveauReqis;
+    return niveau >= niveauRequis;
     }
 
-    public Pokemon getEspeceBase(){
+    public PokemonEspece getEspeceBase(){
     return especeBase; 
     }
 
-    public Pokemon getEspeceEvoluee(){
+    public PokemonEspece getEspeceEvoluee(){
     return especeEvoluee; 
     }
 
-    public int getNiveauReqis(){   
-    return niveauReqis;
+    public int getNiveauRequis(){   
+    return niveauRequis;
     }
 
 

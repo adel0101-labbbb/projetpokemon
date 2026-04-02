@@ -4,27 +4,32 @@ import java.util.List;
 
 public class AttaqueDAO {
 
-    private Connection connection;
+    private DatabaseManager dbm;
+    private TypeDAO typeDAO;
 
-    public AttaqueDAO(Connection connection) {
-        this.connection = connection;
+    public AttaqueDAO() {
+        this.dbm = new DatabaseManager();
+        this.typeDAO = typeDAO;
     }
+
+
 
     // 🔹 Lire toutes les attaques
     public List<Attaque> getAll() throws SQLException {
         List<Attaque> attaques = new ArrayList<>();
+        dbm.connect();
 
         String sql = "SELECT * FROM attaque";
-        Statement stmt = connection.createStatement();
+        Statement stmt = dbm.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
 
         while (rs.next()) {
             Attaque attaque = new Attaque(
-                rs.getInt("precision"),
-                rs.getString("nom"),
-                rs.getInt("puissance"),
-                Type.valueOf(rs.getString("type").toUpperCase()), // correspond à ton Enum Type
-                rs.getInt("priorite")
+            int puissance = rs.getInt("puissance"),
+            String nom = rs.getString("nom"),
+            int precision =  rs.getInt("precision"),
+            typeDAO.getByName(rs.getString("TypeSQL")), // correspond à ton Enum Type
+            rs.getInt("priorite"),
             );
             attaques.add(attaque);
         }
