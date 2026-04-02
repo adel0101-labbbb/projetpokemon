@@ -7,9 +7,7 @@ public class Test {
 
     public static void main(String[] args) {
         try {
-            DatabaseManager dbm = new DatabaseManager();
-            dbm.connect();
-            TypeDAO tyDAO = new TypeDAO(dbm);
+            TypeDAO tyDAO = new TypeDAO();
 
             tyDAO.loadAll();
 
@@ -18,7 +16,11 @@ public class Test {
 
             for (Type t : tyDAO.getAll()) {
                 System.out.println(t.getId() + " - " + t.getNom());
+
+            
+                
             }
+            System.out.println(tyDAO.getByName("Eau"));
 
         } catch (SQLException e) {
             e.printStackTrace();

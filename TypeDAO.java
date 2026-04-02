@@ -12,8 +12,14 @@ public class TypeDAO {
     private Map<Integer, Type> typesParId;
 
     public TypeDAO() {
-        this.dbm = new DatabaseManager();
-        this.typesParId = new HashMap<>();
+        dbm = new DatabaseManager();
+        try {
+            dbm.connect();
+        } catch (SQLException e) {
+            System.out.println("ERREUR : impossible de se connecter à la base de données" + e.getMessage());
+
+        }
+        typesParId = new HashMap<>();
     }
 
     /**
