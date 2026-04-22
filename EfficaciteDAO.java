@@ -7,9 +7,9 @@ public class EfficaciteDAO {
         List<EfficaciteType> liste = new ArrayList<>();
 
         try {
-        DatabaseManager dbm = new DatabaseManager(); // ✅ créer l'objet
-        dbm.connect();                               // ✅ ouvrir la connexion
-        Connection conn = dbm.getConnection();       // ✅ récupérer la connexion
+        DatabaseManager dbm = new DatabaseManager(); 
+        dbm.connect();                               
+        Connection conn = dbm.getConnection();       
 
         
         Statement stmt = conn.createStatement();
@@ -35,7 +35,7 @@ public class EfficaciteDAO {
 
             rs.close();
             stmt.close();
-            dbm.disconnect(); // ✅ fermer la connexion
+            dbm.disconnect(); 
 
         } catch (SQLException e) {
             e.printStackTrace();

@@ -53,10 +53,10 @@ public class AttaqueDAO {
                 ));
             }
         } catch (SQLException e) {
-            // on passe au fallback
+            
         }
 
-        // 2) fallback : 4 attaques du type principal
+     
         if (liste.isEmpty() && typePrincipal != null) {
             String sql =
                 "SELECT a.libelle, a.puissance, a.precis, t.id AS type_id, t.libelle AS type_libelle " +
@@ -89,7 +89,7 @@ public class AttaqueDAO {
             }
         }
 
-        // 3) fallback ultime
+    
         if (liste.isEmpty()) {
             Type normal = new Type(999, "Normal");
             liste.add(new Attaque(35, "Charge", 95, normal, 0));
